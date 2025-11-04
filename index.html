@@ -34,26 +34,25 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #ff4d6d;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             animation: fadeIn 2s ease-in-out;
-            padding: 0 15px;
         }
         
         .photo-frame {
-            width: 90%;
-            max-width: 500px;
-            height: 350px;
-            margin: 0 auto 25px;
+            width: 500px;
+            height: 375px;
+            margin: 0 auto 30px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
             position: relative;
             transition: transform 0.5s;
-            border: 6px solid white;
+            border: 8px solid white;
+            padding: 5px;
         }
         
         .photo-frame:hover {
@@ -64,35 +63,37 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 10px;
         }
         
         .message {
-            background: rgba(255,255,255,0.9);
-            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            padding: 25px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            line-height: 1.5;
-            margin-bottom: 25px;
-            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
             animation: slideUp 1.5s ease-out;
-            margin: 0 15px 25px;
+            position: relative;
         }
         
         .special-heart {
             color: #ff4d6d;
-            font-size: 1.4rem;
+            font-size: 2rem;
             display: inline-block;
-            margin-left: 6px;
+            margin-left: 8px;
             animation: heartbeat 1.5s infinite, float 3s ease-in-out infinite;
-            text-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+            text-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+            filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.4));
         }
         
         .heart-btn {
             background: #ff4d6d;
             color: white;
             border: none;
-            padding: 14px 28px;
-            font-size: 1.1rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             border-radius: 50px;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
@@ -100,14 +101,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            margin: 0 auto 18px;
-            min-height: 50px;
+            gap: 10px;
+            margin: 0 auto 20px;
         }
         
         .heart-btn:hover {
             background: #ff3357;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
         }
         
@@ -116,17 +116,16 @@
         }
         
         .counter {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         footer {
             text-align: center;
-            padding: 15px 0;
-            margin-top: 15px;
+            padding: 20px 0;
+            margin-top: 20px;
             color: #555;
-            font-size: 0.9rem;
         }
         
         /* Анимации */
@@ -156,7 +155,7 @@
         
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-3px); }
+            50% { transform: translateY(-5px); }
             100% { transform: translateY(0px); }
         }
         
@@ -176,7 +175,7 @@
             top: -50px;
             color: rgba(255, 77, 109, 0.7);
             animation: fall linear forwards;
-            font-size: 18px;
+            font-size: 20px;
         }
         
         @keyframes fall {
@@ -186,94 +185,45 @@
             }
         }
         
-        /* Адаптивность для iPhone */
-        @media (max-width: 428px) { /* iPhone 14 Pro Max */
+        /* Адаптивность */
+        @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
-                margin-bottom: 20px;
+                font-size: 2.2rem;
             }
             
             .photo-frame {
+                width: 400px;
                 height: 300px;
-                margin-bottom: 20px;
             }
             
             .message {
-                font-size: 1rem;
-                padding: 18px;
-                margin: 0 10px 20px;
-            }
-            
-            .special-heart {
-                font-size: 1.2rem;
-                margin-left: 4px;
-            }
-            
-            .heart-btn {
-                padding: 12px 24px;
-                font-size: 1rem;
-                margin-bottom: 15px;
-                min-height: 45px;
-            }
-            
-            .counter {
-                font-size: 0.9rem;
-                margin-bottom: 25px;
+                font-size: 1.1rem;
+                padding: 20px;
             }
         }
         
-        @media (max-width: 390px) { /* iPhone 12/13 */
+        @media (max-width: 600px) {
+            .photo-frame {
+                width: 350px;
+                height: 262px;
+            }
+        }
+        
+        @media (max-width: 480px) {
             h1 {
                 font-size: 1.8rem;
             }
             
             .photo-frame {
-                height: 280px;
-            }
-            
-            .message {
-                font-size: 0.95rem;
-                padding: 16px;
-            }
-            
-            .special-heart {
-                font-size: 1.1rem;
+                width: 300px;
+                height: 225px;
             }
         }
         
-        @media (max-width: 375px) { /* iPhone SE */
-            h1 {
-                font-size: 1.6rem;
-            }
-            
+        @media (max-width: 360px) {
             .photo-frame {
-                height: 250px;
-            }
-            
-            .message {
-                font-size: 0.9rem;
-                padding: 14px;
-            }
-            
-            .special-heart {
-                font-size: 1rem;
-            }
-            
-            .heart-btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-        }
-        
-        /* Поддержка касаний на iPhone */
-        @media (hover: none) {
-            .heart-btn:hover {
-                transform: none;
-                box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-            }
-            
-            .photo-frame:hover {
-                transform: none;
+                width: 260px;
+                height: 195px;
             }
         }
     </style>
@@ -285,7 +235,8 @@
         <h1>Для любимой Машули <i class="fas fa-heart" style="color: #ff4d6d;"></i></h1>
         
         <div class="photo-frame">
-            <img src="https://github.com/pantinartem2-ai/newrepositary/main/girlfreind.jpg" alt="Наше фото" class="our-photo">
+            <img src="https://raw.githubusercontent.com/pantinartem2-ai
+/newrepositary/main/girlfreind.jpg" alt="Наше фото" class="our-photo">
         </div>
         
         <div class="message">
@@ -328,7 +279,7 @@
             }
             
             // Случайный размер
-            const size = Math.random() * 15 + 12;
+            const size = Math.random() * 20 + 15;
             heart.style.fontSize = `${size}px`;
             
             // Случайная длительность анимации
@@ -388,14 +339,6 @@
                 createHeart(e.clientX, e.clientY);
             }
         });
-        
-        // Оптимизация для тач-устройств
-        document.addEventListener('touchstart', function(e) {
-            if (e.target !== sendHeartBtn && !sendHeartBtn.contains(e.target)) {
-                createHeart(e.touches[0].clientX, e.touches[0].clientY);
-            }
-        });
     </script>
 </body>
 </html>
-
